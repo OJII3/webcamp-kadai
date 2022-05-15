@@ -1,6 +1,8 @@
 window.onload = () => {
     let username = prompt('Your name?');
-    username = username ? username : '名無し';
+    if ( !username ) {
+        username = '名無し'
+    }
     document.getElementById('name').innerHTML = username;
     
     let rand = ~~(Math.random()*5);
